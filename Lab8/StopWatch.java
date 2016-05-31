@@ -55,6 +55,7 @@ public class StopWatch
 		return elapsed;
 	}
 	
+	//created toString method with getElapsedTime method in it so that the elapsed time is returned in milliseconds
 	public String toString()
 	{
 		getElapsedTime();
@@ -69,10 +70,16 @@ public class StopWatch
 		s.start();
 		double z = 0.0;
 		//use scanner to get an string from keyboard
-		if (scnr.next().equals("abc"))
+		//while loop used to stop the stopwatch when the user enters abc
+		while (s.running == true)
 		{
-		s.stop();
+			String user = scnr.next();
+			if (user.equals("abc"))
+			{
+				s.stop();
+			}
 		}
+		//prints out elapsed time using toString method
 		System.out.println("elapsed time in milliseconds: " + s);
 	}
 }
