@@ -7,6 +7,10 @@
  
 import java.util.Scanner;
  
+ /*****************************************************************************************************************************************************
+ * Class Stopwatch will start a timer from when the program begins until when the user enters 'abc' and then print out the elapsed time in miliseconds
+ *****************************************************************************************************************************************************/
+ 
 public class StopWatch 
 {
 	
