@@ -1,7 +1,7 @@
-/****************************************************************************************************************************************************
-* Class CourseTaken creates CourseTaken objects that defines a courseName and a grade for the objects in the constructor based on object decleration
+/************************************************************************************
+* Class CourseTaken stores a courseName and a grade
 * Includes methods to get grade and toString to print out grade and the course name
-****************************************************************************************************************************************************/
+************************************************************************************/
 
  public class CourseTaken
  {

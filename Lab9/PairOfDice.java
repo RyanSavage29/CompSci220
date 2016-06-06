@@ -1,5 +1,5 @@
 /*******************************************************************************************************************************************************************
-* Class PairOfDice creates PairOfDice objects that defines 2 face values to represent a pair of dice
+* Class PairOfDice that stores 2 face values to represent a pair of dice
 * Includes methods to roll each die individually or together, set the values of each die, get the values of each die, calculate the sum of the dice, and a toString
 *******************************************************************************************************************************************************************/
 

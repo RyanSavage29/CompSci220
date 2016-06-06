@@ -8,14 +8,26 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+/****************************************************************************************************************************
+* Class ExpAcct is a driver class that allows the user to instantiate and update ExpressAccounts
+* Includes methods to run a main menu, a user menu, create an ExpressAccount, retrieve an ExpressAmount, and run the program
+****************************************************************************************************************************/
+
 public class ExpAcct
 {	
-	static Scanner scnr = new Scanner(System.in);
-	static ArrayList<ExpressAccount> accounts = new ArrayList<ExpressAccount>();
-	static int current;
-	static int accountNumber = 0;
-	static boolean run = true;
-	static boolean user = false;
+	static Scanner scnr = new Scanner(System.in);                                // used to get user input
+	static ArrayList<ExpressAccount> accounts = new ArrayList<ExpressAccount>(); // used to store all of the ExpressAccounts
+	static int current;                                                          // used to store current ExpressAccount number
+	static int accountNumber = 0;                                                // counter for number of ExpressAccounts in arraylist accounts
+	static boolean run = true;                                                   // used to loop program until user quits
+	static boolean user = false;                                                 // used to enter and loop user menu until user logs out
+	
+	/**********************************************************************************************************
+	* Method to display main menu and allows user to navigate it
+	* User can create a new ExpressAccount and enter the user menu using that new ExpressAccount by entering 1
+	* User can retrieve an exsisting ExpressAccount by entering 2
+	* User can exit the program by entering 3
+	**********************************************************************************************************/
 	
 	public static void mainMenu()
 	{
@@ -40,6 +52,10 @@ public class ExpAcct
 			}
 	}
 	
+	/**********************************************************************************************************************************************
+	* Method used to create a new ExpressAccount in arraylist accounts and set the current account number equal to the ExpressAccount just created
+	**********************************************************************************************************************************************/
+	
 	public static void newAccount()
 	{
 		accounts.add(new ExpressAccount(accountNumber));
@@ -47,6 +63,11 @@ public class ExpAcct
 		accountNumber++;
 	}
 
+	/******************************************************************************************
+	* Method used to retrive an ExpressAccount that the user selects
+	* If the accountNumber exsists, the user is sent to the user menu with that ExpressAccount
+	******************************************************************************************/
+	
 	public static void retrieveAccount()
 	{
 		System.out.print("\nEnter account number: ");
@@ -61,6 +82,14 @@ public class ExpAcct
 			System.out.println("Welcome back Student Express account #" + accounts.get(current).getAccountNumber() + ", balance: $" + accounts.get(current).getAccountBalance() + ", number of meals: " + accounts.get(current).getNumOfMeals());
 		}
 	}
+	
+	/************************************************************
+	* Method to display user menu and allows user to navigate it
+	* User can enter a deposit amount to store by entering 1
+	* User can purchase meals by entering 2
+	* User can eat a meal by entering 3
+	* User can log out and go back to the main menu by entering 4
+	*************************************************************/
 	
 	public static void userMenu()
 	{
@@ -89,6 +118,10 @@ public class ExpAcct
 
 			}
 	}
+	
+	/***************************************
+	* Runs the program until the user quits
+	***************************************/
 	
 	public static void main(String[] args)
 	{

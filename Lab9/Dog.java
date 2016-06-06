@@ -1,7 +1,7 @@
-/*****************************************************************************************************************************
-* Class Dog creates Dog objects that defines an age and a name for the objects in the constructor based on object decleration
+/********************************************************************************************************************
+* Class Dog that stores an age and a name
 * Includes methods to get name and age, set name and age, a toString, and to calculate the dog's age in person years
-*****************************************************************************************************************************/
+********************************************************************************************************************/
 
 public class Dog
 {
